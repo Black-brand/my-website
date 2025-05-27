@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK Clothing Brand</title>
+    <style>
+        /* Simulated pre-built Tailwind CSS output */
+        .bg-gray-100 { background-color: #f3f4f6; }
+        .bg-black { background-color: #000000; }
+        .text-white { color: #ffffff; }
+        .p-4 { padding: 1rem; }
+        .sticky { position: sticky; }
+        .top-0 { top: 0; }
+        .z-10 { z-index: 10; }
+        .container { max-width: 1280px; margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .justify-between { justify-content: space-between; }
+        .items-center { align-items: center; }
+        .text-2xl { font-size: 1.5rem; }
+        .font-bold { font-weight: 700; }
+        .hover\:text-gray-300:hover { color: #d1d5db; }
+        .p-2 { padding: 0.5rem; }
+        .rounded { border-radius: 0.25rem; }
+        .text-black { color: #000000; }
+        .bg-gray-700 { background-color: #374151; }
+        .hover\:bg-gray-600:hover { background-color: #4b5563; }
+        .bg-white { background-color: #ffffff; }
+        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+        .text-center { text-align: center; }
+        .text-4xl { font-size: 2.25rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .text-lg { font-size: 1.125rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .hover\:bg-gray-800:hover { background-color: #1f2937; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .grid { display: grid; }
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .sm\:grid-cols-2 { @media (min-width: 640px) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        .lg\:grid-cols-3 { @media (min-width: 1024px) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        .gap-6 { gap: 1.5rem; }
+        .shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+        .w-full { width: 100%; }
+        .border { border-width: 1px; }
+        .text-xl { font-size: 1.25rem; }
+        .font-semibold { font-weight: 600; }
+        .bg-blue-500 { background-color: #3b82f6; }
+        .hover\:bg-blue-600:hover { background-color: #2563eb; }
+        .bg-green-500 { background-color: #22c55e; }
+        .hover\:bg-green-600:hover { background-color: #16a34a; }
+        .bg-yellow-500 { background-color: #eab308; }
+        .hover\:bg-yellow-600:hover { background-color: #ca8a04; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .w-24 { width: 6rem; }
+        .h-24 { height: 6rem; }
+        .object-cover { object-fit: cover; }
+        .inline-block { display: inline-block; }
+        .mr-2 { margin-right: 0.5rem; }
+        .space-x-2 > * + * { margin-left: 0.5rem; }
+        .space-x-4 > * + * { margin-left: 1rem; }
+        .hidden { display: none; }
+        .hero-bg { background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1); }
+        .font-sans { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-black text-white p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">BLACK</h1>
+            <div class="flex items-center space-x-4">
+                <a href="#home" class="hover:text-gray-300">Home</a>
+                <input id="searchInput" type="text" placeholder="Search products..." class="p-2 rounded text-black">
+                <button onclick="searchProducts()" class="bg-gray-700 p-2 rounded hover:bg-gray-600">Search</button>
+                <a href="#cart" class="hover:text-gray-300">Cart (<span id="cartCount">0</span>)</a>
+                <a href="#wishlist" class="hover:text-gray-300">Wishlist (<span id="wishlistCount">0</span>)</a>
+                <a href="#message" class="hover:text-gray-300">Message</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-4">Welcome to BLACK Clothing Brand</h2>
+            <p class="text-lg mb-6">Discover the latest in Shirts, Panjabis, and T-Shirts!</p>
+            <a href="#products" class="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="container mx-auto py-10">
+        <h2 class="text-3xl font-bold text-center mb-6">Our Collection</h2>
+        <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Products will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Product Upload Section -->
+    <section id="upload" class="container mx-auto py-10">
+        <h2 class="text-3xl font-bold text-center mb-6">Add New Product</h2>
+        <div class="bg-white p-6 rounded shadow">
+            <input id="productName" type="text" placeholder="Product Name" class="w-full p-2 mb-4 border rounded">
+            <textarea id="productDescription" placeholder="Product Description" class="w-full p-2 mb-4 border rounded"></textarea>
+            <input id="productPrice" type="number" placeholder="Price" class="w-full p-2 mb-4 border rounded">
+            <input id="productImages" type="file" multiple accept="image/*" class="w-full p-2 mb-4">
+            <button onclick="addProduct()" class="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Add Product</button>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="container mx-auto py-10 hidden">
+        <h2 class="text-3xl font-bold text-center mb-6">Your Cart</h2>
+        <div id="cartItems" class="grid grid-cols-1 gap-4">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Wishlist Section -->
+    <section id="wishlist" class="container mx-auto py-10 hidden">
+        <h2 class="text-3xl font-bold text-center mb-6">Your Wishlist</h2>
+        <div id="wishlistItems" class="grid grid-cols-1 gap-4">
+            <!-- Wishlist items will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="message" class="container mx-auto py-10 hidden">
+        <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
+        <div class="bg-white p-6 rounded shadow">
+            <textarea id="messageInput" placeholder="Your Message" class="w-full p-2 mb-4 border rounded"></textarea>
+            <button onclick="sendMessage()" class="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Send</button>
+        </div>
+    </section>
+
+    <script>
+        let products = [
+            { id: 1, name: "Classic Shirt", description: "Elegant cotton shirt", price: 29.99, images: [] },
+            { id: 2, name: "Panjabi", description: "Traditional embroidered Panjabi", price: 49.99, images: [] },
+            { id: 3, name: "Graphic T-Shirt", description: "Cool graphic tee", price: 19.99, images: [] }
+        ];
+        let cart = [];
+        let wishlist = [];
+
+        function displayProducts() {
+            const productList = document.getElementById('productList');
+            productList.innerHTML = '';
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'bg-white p-4 rounded shadow';
+                productCard.innerHTML = `
+                    <h3 class="text-xl font-bold">${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p class="text-lg font-semibold">$${product.price}</p>
+                    <div class="flex space-x-2">
+                        <button onclick="editProduct(${product.id})" class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600">Edit</button>
+                        <button onclick="addToCart(${product.id})" class="bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600">Add to Cart</button>
+                        <button onclick="addToWishlist(${product.id})" class="bg-yellow-500 text-white py-1 px-2 rounded hover:bg-yellow-600">Wishlist</button>
+                    </div>
+                    <div class="mt-2">
+                        ${product.images.map(img => `<img src="${img}" class="w-24 h-24 object-cover inline-block mr-2" />`).join('')}
+                    </div>
+                `;
+                productList.appendChild(productCard);
+            });
+        }
+
+        function addProduct() {
+            const name = document.getElementById('productName').value;
+            const description = document.getElementById('productDescription').value;
+            const price = parseFloat(document.getElementById('productPrice').value);
+            const images = document.getElementById('productImages').files;
+            const imageUrls = Array.from(images).map(file => URL.createObjectURL(file));
+            if (name && description && price) {
+                products.push({
+                    id: products.length + 1,
+                    name,
+                    description,
+                    price,
+                    images: imageUrls
+                });
+                displayProducts();
+                document.getElementById('productName').value = '';
+                document.getElementById('productDescription').value = '';
+                document.getElementById('productPrice').value = '';
+                document.getElementById('productImages').value = '';
+            }
+        }
+
+        function editProduct(id) {
+            const product = products.find(p => p.id === id);
+            if (product) {
+                const newName = prompt('Enter new name:', product.name);
+                const newDescription = prompt('Enter new description:', product.description);
+                const newPrice = prompt('Enter new price:', product.price);
+                if (newName && newDescription && newPrice) {
+                    product.name = newName;
+                    product.description = newDescription;
+                    product.price = parseFloat(newPrice);
+                    displayProducts();
+                }
+            }
+        }
+
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            if (product) {
+                cart.push(product);
+                document.getElementById('cartCount').textContent = cart.length;
+                displayCart();
+            }
+        }
+
+        function addToWishlist(id) {
+            const product = products.find(p => p.id === id);
+            if (product && !wishlist.some(p => p.id === id)) {
+                wishlist.push(product);
+                document.getElementById('wishlistCount').textContent = wishlist.length;
+                displayWishlist();
+            }
+        }
+
+        function displayCart() {
+            const cartItems = document.getElementById('cartItems');
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'bg-white p-4 rounded shadow';
+                cartItem.innerHTML = `
+                    <h3 class="text-xl font-bold">${item.name}</h3>
+                    <p>$${item.price}</p>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+        }
+
+        function displayWishlist() {
+            const wishlistItems = document.getElementById('wishlistItems');
+            wishlistItems.innerHTML = '';
+            wishlist.forEach(item => {
+                const wishlistItem = document.createElement('div');
+                wishlistItem.className = 'bg-white p-4 rounded shadow';
+                wishlistItem.innerHTML = `
+                    <h3 class="text-xl font-bold">${item.name}</h3>
+                    <p>$${item.price}</p>
+                `;
+                wishlistItems.appendChild(wishlistItem);
+            });
+        }
+
+        function searchProducts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filteredProducts = products.filter(p => p.name.toLowerCase().includes(query) || p.description.toLowerCase().includes(query));
+            const productList = document.getElementById('productList');
+            productList.innerHTML = '';
+            filteredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'bg-white p-4 rounded shadow';
+                productCard.innerHTML = `
+                    <h3 class="text-xl font-bold">${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p class="text-lg font-semibold">$${product.price}</p>
+                    <div class="flex space-x-2">
+                        <button onclick="editProduct(${product.id})" class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600">Edit</button>
+                        <button onclick="addToCart(${product.id})" class="bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600">Add to Cart</button>
+                        <button onclick="addToWishlist(${product.id})" class="bg-yellow-500 text-white py-1 px-2 rounded hover:bg-yellow-600">Wishlist</button>
+                    </div>
+                `;
+                productList.appendChild(productCard);
+            });
+        }
+
+        function sendMessage() {
+            const message = document.getElementById('messageInput').value;
+            if (message) {
+                alert('Message sent: ' + message);
+                document.getElementById('messageInput').value = '';
+            }
+        }
+
+        // Show/hide sections
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.add('hidden');
+                });
+                document.getElementById(targetId).classList.remove('hidden');
+            });
+        });
+
+        // Initial display
+        displayProducts();
+    </script>
+</body>
+</html>
